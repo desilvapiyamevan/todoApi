@@ -33,6 +33,7 @@ builder.Services.AddSwaggerGen(options =>
     options.EnableAnnotations();
 });
 
+builder.Services.AddScoped<ITodoService, TodoService>();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
